@@ -1,0 +1,91 @@
+import { HERO, CONTACT } from '../../data/siteData';
+import { Button } from '../ui/Button';
+import { IconWhatsApp, IconCheck } from '../ui/Icons';
+import styles from './Hero.module.css';
+
+export function Hero() {
+  return (
+    <section className={styles.hero} id="top" aria-label="Hero">
+      {/* Background */}
+      <div className={styles.bg} aria-hidden="true">
+        <div className={styles.bgGradient} />
+        <div className={styles.bgPattern} />
+        <div className={styles.bgOrb1} />
+        <div className={styles.bgOrb2} />
+      </div>
+
+      <div className={styles.inner}>
+        <div className={`container ${styles.contentWrap}`}>
+          {/* Pre-heading */}
+          <div className={styles.preheading} data-reveal="fade">
+            <span className={styles.preheadingDot} aria-hidden="true" />
+            <span>{HERO.preheading}</span>
+          </div>
+
+          {/* Headline */}
+          <h1 className={styles.headline} data-reveal>
+            {HERO.headline.split('\n').map((line, i) => (
+              <span key={i} className={i === 1 ? styles.headlineGold : ''}>
+                {line}
+                {i < HERO.headline.split('\n').length - 1 && <br />}
+              </span>
+            ))}
+          </h1>
+
+          {/* Subheadline */}
+          <p className={styles.subheadline} data-reveal data-reveal-delay="1">
+            {HERO.subheadline}
+          </p>
+
+          {/* Trust badges */}
+          <ul className={styles.trust} role="list" data-reveal data-reveal-delay="2" aria-label="Key credentials">
+            {HERO.trustBadges.map((badge) => (
+              <li key={badge} className={styles.trustItem}>
+                <IconCheck />
+                <span>{badge}</span>
+              </li>
+            ))}
+          </ul>
+
+          {/* CTAs */}
+          <div className={styles.ctas} data-reveal data-reveal-delay="3">
+            <Button href={HERO.cta.primary.href} variant="primary" size="lg">
+              {HERO.cta.primary.label}
+            </Button>
+            <Button href={HERO.cta.secondary.href} variant="outline-light" size="lg">
+              {HERO.cta.secondary.label}
+            </Button>
+            <a
+              href={`https://wa.me/${CONTACT.whatsapp}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.waLink}
+              aria-label="Chat on WhatsApp"
+            >
+              <IconWhatsApp />
+              <span>WhatsApp Us</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      {/* Stats bar */}
+      <div className={styles.statsBar} aria-label="Key statistics">
+        <div className="container">
+          <ul className={styles.statsList} role="list">
+            {HERO.stats.map(({ value, label }, i) => (
+              <li key={i} className={styles.statItem}>
+                <strong className={styles.statValue}>{value}</strong>
+                <span className={styles.statLabel}>
+                  {label.split('\n').map((l, j) => (
+                    <span key={j}>{l}</span>
+                  ))}
+                </span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </section>
+  );
+}

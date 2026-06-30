@@ -1,0 +1,14 @@
+.divider {
+  width: 36px;
+  height: 1px;
+  background: var(--color-accent);
+  margin-bottom: var(--space-6);
+}
+
+.divider--center {
+  margin-inline: auto;
+}
+
+.divider--light {
+  background: var(--color-accent-light);
+}
