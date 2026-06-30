@@ -1,0 +1,141 @@
+.about {
+  background-color: var(--color-white);
+}
+
+.inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-16);
+  align-items: center;
+}
+
+/* Image column */
+.imageCol {
+  display: flex;
+  justify-content: center;
+}
+
+.imageStack {
+  position: relative;
+  width: 440px;
+  max-width: 100%;
+  height: 480px;
+}
+
+.imagePrimary {
+  width: 100%;
+  height: 100%;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+}
+
+.imagePlaceholder {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, var(--color-accent), var(--color-mid-gray));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-4);
+  color: var(--color-text-light);
+  font-size: var(--fs-sm);
+}
+
+.imageSecondary {
+  position: absolute;
+  bottom: -24px;
+  right: -24px;
+}
+
+.accentCard {
+  background: var(--color-primary);
+  color: var(--color-white);
+  border-radius: var(--radius-lg);
+  padding: var(--space-4) var(--space-5);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  box-shadow: var(--shadow-lg);
+}
+
+.accentCard strong {
+  font-size: var(--fs-md);
+  font-weight: var(--fw-bold);
+}
+
+.accentCard span {
+  font-size: var(--fs-xs);
+  opacity: 0.8;
+}
+
+.yearsBadge {
+  position: absolute;
+  top: -16px;
+  left: -16px;
+  width: 90px;
+  height: 90px;
+  background: var(--color-secondary);
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1px;
+  box-shadow: var(--shadow-md);
+}
+
+.yearsbadge strong,
+.yearsBadge strong {
+  font-size: var(--fs-xl);
+  font-weight: var(--fw-bold);
+  color: var(--color-white);
+  line-height: 1;
+}
+
+.yearsBadge span,
+.yearsBadge span {
+  font-size: 9px;
+  color: rgba(255,255,255,0.85);
+  font-weight: var(--fw-medium);
+  text-align: center;
+  line-height: 1.2;
+}
+
+/* Content column */
+.contentCol {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.body {
+  color: var(--color-text-secondary);
+  line-height: var(--lh-relaxed);
+  font-size: var(--fs-base);
+}
+
+.trustList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  margin: var(--space-2) 0;
+}
+
+.trustItem {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  font-size: var(--fs-base);
+  color: var(--color-text);
+  font-weight: var(--fw-medium);
+}
+
+@media (max-width: 1024px) {
+  .inner {
+    grid-template-columns: 1fr;
+  }
+  .imageCol {
+    display: none;
+  }
+}

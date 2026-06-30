@@ -1,0 +1,29 @@
+.section {
+  background-color: var(--color-white);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-6);
+  margin-bottom: var(--space-6);
+  list-style: none;
+}
+
+.disclaimer {
+  text-align: center;
+  font-size: var(--fs-xs);
+  color: var(--color-text-light);
+  font-style: italic;
+  margin-bottom: var(--space-8);
+}
+
+.cta {
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
