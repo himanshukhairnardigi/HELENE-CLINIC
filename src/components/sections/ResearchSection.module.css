@@ -45,8 +45,8 @@
   font-weight: var(--weight-bold);
   letter-spacing: var(--tracking-wider);
   text-transform: uppercase;
-  color: var(--color-primary);
-  background: rgba(26,50,73,0.08);
+  color: var(--clr-teal-700);
+  background: var(--clr-teal-50);
   border-radius: var(--radius-full);
   padding: var(--space-1) var(--space-3);
   align-self: flex-start;

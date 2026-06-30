@@ -35,7 +35,7 @@
   width: 36px;
   height: 36px;
   border-radius: 50%;
-  background: var(--color-primary);
+  background: var(--clr-teal-500);
   color: var(--clr-white);
   display: flex;
   align-items: center;
@@ -75,7 +75,7 @@
 .item svg {
   width: 15px;
   height: 15px;
-  color: var(--clr-gold-400);
+  color: var(--clr-teal-500);
   flex-shrink: 0;
   margin-top: 2px;
 }
@@ -93,7 +93,7 @@
 .note {
   background: var(--color-bg-alt);
   border: 1px solid var(--color-border);
-  border-left: 3px solid var(--clr-gold-400);
+  border-left: 3px solid var(--clr-teal-500);
   border-radius: var(--radius-lg);
   padding: var(--space-6) var(--space-8);
   display: flex;

@@ -29,7 +29,7 @@
 
 .card:hover {
   box-shadow: var(--shadow-md);
-  border-color: rgba(201,164,74,0.3);
+  border-color: rgba(0,168,192,0.3);
 }
 
 .cardInner {

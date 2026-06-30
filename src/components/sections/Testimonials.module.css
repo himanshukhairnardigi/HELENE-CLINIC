@@ -1,5 +1,5 @@
 .testimonials {
-  background-color: var(--clr-navy-900);
+  background-color: var(--clr-navy-800);
 }
 
 .intro {
@@ -16,8 +16,8 @@
 }
 
 .card {
-  background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(255,255,255,0.08);
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.10);
   border-radius: var(--radius-xl);
   padding: var(--space-8);
   display: flex;
@@ -27,8 +27,8 @@
 }
 
 .card:hover {
-  background: rgba(255,255,255,0.07);
-  border-color: rgba(201,164,74,0.25);
+  background: rgba(255,255,255,0.09);
+  border-color: rgba(0,168,192,0.30);
 }
 
 .stars {
@@ -39,12 +39,11 @@
 .stars svg {
   width: 16px;
   height: 16px;
-  color: var(--clr-gold-400);
-  fill: var(--clr-gold-400);
+  color: var(--clr-teal-400);
+  fill: var(--clr-teal-400);
 }
 
 .quote {
-  font-family: var(--font-display);
   font-size: var(--text-lg);
   font-style: italic;
   line-height: var(--leading-relaxed);
@@ -65,13 +64,13 @@
   height: 44px;
   border-radius: 50%;
   background: var(--clr-navy-700);
-  border: 1px solid rgba(201,164,74,0.3);
+  border: 1px solid rgba(0,168,192,0.3);
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: var(--text-sm);
   font-weight: var(--weight-semibold);
-  color: var(--clr-gold-300);
+  color: var(--clr-teal-300);
   flex-shrink: 0;
 }
 

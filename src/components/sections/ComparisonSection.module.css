@@ -100,12 +100,12 @@
 
 /* Highlighted row (Helene) */
 .trHighlight .td {
-  background: rgba(26,50,73,0.04);
-  border-top: 2px solid var(--clr-gold-400);
-  border-bottom: 2px solid var(--clr-gold-400);
+  background: var(--clr-teal-50);
+  border-top: 2px solid var(--clr-teal-500);
+  border-bottom: 2px solid var(--clr-teal-500);
 }
 
-.trHighlight .td:first-child { border-left: 3px solid var(--clr-gold-400); }
+.trHighlight .td:first-child { border-left: 3px solid var(--clr-teal-500); }
 
 .hlBadge {
   display: inline-block;
@@ -113,8 +113,8 @@
   font-weight: var(--weight-bold);
   letter-spacing: var(--tracking-wider);
   text-transform: uppercase;
-  color: var(--clr-navy-900);
-  background: var(--clr-gold-400);
+  color: var(--clr-white);
+  background: var(--clr-teal-500);
   border-radius: 3px;
   padding: 1px 6px;
   align-self: flex-start;

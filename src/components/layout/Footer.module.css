@@ -38,7 +38,7 @@
 .logoDot {
   width: 4px;
   height: 4px;
-  background: var(--clr-gold-400);
+  background: var(--clr-teal-400);
   border-radius: 50%;
 }
 
@@ -66,7 +66,7 @@
 }
 
 .contactLine svg { width: 14px; height: 14px; flex-shrink: 0; opacity: 0.7; }
-.contactLine:hover { color: var(--clr-gold-300); }
+.contactLine:hover { color: var(--clr-teal-400); }
 
 .social {
   display: flex;
@@ -110,7 +110,7 @@
   line-height: var(--leading-snug);
 }
 
-.colLink:hover { color: var(--clr-gold-300); }
+.colLink:hover { color: var(--clr-teal-400); }
 
 /* CTA column */
 .ctaCol { display: flex; flex-direction: column; gap: var(--space-4); }
@@ -124,8 +124,8 @@
 .ctaColBtn {
   display: inline-block;
   text-align: center;
-  background: var(--clr-gold-400);
-  color: var(--clr-navy-900);
+  background: var(--clr-teal-500);
+  color: var(--clr-white);
   font-size: var(--text-xs);
   font-weight: var(--weight-bold);
   letter-spacing: var(--tracking-wider);
@@ -136,7 +136,7 @@
   transition: background var(--transition-fast);
 }
 
-.ctaColBtn:hover { background: var(--clr-gold-300); }
+.ctaColBtn:hover { background: var(--clr-teal-600); }
 
 .waBtn {
   display: inline-flex;

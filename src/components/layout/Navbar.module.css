@@ -6,18 +6,9 @@
   height: var(--nav-height);
   display: flex;
   align-items: center;
-  background-color: transparent;
-  transition:
-    background-color var(--transition-base),
-    box-shadow var(--transition-base),
-    border-color var(--transition-base);
-  border-bottom: 1px solid rgba(255,255,255,0);
-}
-
-.header--scrolled {
   background-color: var(--clr-white);
-  border-color: var(--color-border);
-  box-shadow: var(--shadow-sm);
+  border-bottom: 1px solid var(--color-border);
+  box-shadow: var(--shadow-xs);
 }
 
 .inner {
@@ -37,16 +28,11 @@
 }
 
 .logoRect {
-  fill: rgba(255,255,255,0.15);
-  transition: fill var(--transition-base);
+  fill: var(--clr-teal-500);
 }
 
 .logoPlus {
-  stroke: var(--clr-gold-400);
-}
-
-.header--scrolled .logoRect {
-  fill: var(--color-primary);
+  stroke: var(--clr-white);
 }
 
 .logoText {
@@ -61,22 +47,12 @@
   font-size: var(--text-sm);
   font-weight: var(--weight-bold);
   letter-spacing: var(--tracking-widest);
-  color: var(--clr-white);
-  transition: color var(--transition-base);
-}
-
-.header--scrolled .logoName {
   color: var(--clr-navy-800);
 }
 
 .logoDivider {
   width: 1px;
   height: 14px;
-  background: rgba(255,255,255,0.35);
-  transition: background var(--transition-base);
-}
-
-.header--scrolled .logoDivider {
   background: var(--color-border-dark);
 }
 
@@ -85,13 +61,8 @@
   font-size: var(--text-xs);
   font-weight: var(--weight-medium);
   letter-spacing: var(--tracking-widest);
-  color: rgba(255,255,255,0.7);
-  transition: color var(--transition-base);
-  text-transform: uppercase;
-}
-
-.header--scrolled .logoSub {
   color: var(--clr-gray-500);
+  text-transform: uppercase;
 }
 
 /* ---------- Desktop Nav ---------- */
@@ -113,32 +84,22 @@
   padding: var(--space-2) var(--space-3);
   font-size: var(--text-sm);
   font-weight: var(--weight-medium);
-  letter-spacing: var(--tracking-wide);
-  color: rgba(255,255,255,0.85);
+  color: var(--clr-gray-600);
   text-decoration: none;
   border-radius: var(--radius-sm);
   transition: color var(--transition-fast), background-color var(--transition-fast);
 }
 
 .navLink:hover {
-  color: var(--clr-white);
-  background-color: rgba(255,255,255,0.08);
-}
-
-.header--scrolled .navLink {
-  color: var(--clr-gray-600);
-}
-
-.header--scrolled .navLink:hover {
-  color: var(--color-primary);
-  background-color: var(--color-bg-alt);
+  color: var(--clr-teal-500);
+  background-color: var(--clr-teal-50);
 }
 
 /* ---------- Desktop Actions ---------- */
 .actions {
   display: flex;
   align-items: center;
-  gap: var(--space-5);
+  gap: var(--space-4);
   flex-shrink: 0;
 }
 
@@ -148,21 +109,33 @@
   gap: var(--space-2);
   font-size: var(--text-sm);
   font-weight: var(--weight-medium);
-  color: rgba(255,255,255,0.8);
+  color: var(--clr-gray-600);
   text-decoration: none;
   transition: color var(--transition-fast);
 }
 
 .phoneLink svg { width: 15px; height: 15px; }
+.phoneLink:hover { color: var(--clr-teal-500); }
 
-.phoneLink:hover { color: var(--clr-white); }
-
-.header--scrolled .phoneLink {
-  color: var(--clr-gray-500);
+.ctaBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--text-xs);
+  font-weight: var(--weight-semibold);
+  letter-spacing: var(--tracking-wide);
+  color: var(--clr-white);
+  background: var(--clr-teal-500);
+  border-radius: var(--radius-full);
+  padding: var(--space-2) var(--space-5);
+  text-decoration: none;
+  transition: background var(--transition-fast), transform var(--transition-fast);
+  white-space: nowrap;
 }
 
-.header--scrolled .phoneLink:hover {
-  color: var(--color-primary);
+.ctaBtn:hover {
+  background: var(--clr-teal-600);
+  transform: translateY(-1px);
 }
 
 /* ---------- Mobile Toggle ---------- */
@@ -173,18 +146,13 @@
   width: 40px;
   height: 40px;
   border-radius: var(--radius-md);
-  color: var(--clr-white);
-  background: rgba(255,255,255,0.1);
+  color: var(--clr-navy-800);
+  background: var(--clr-gray-50);
   margin-left: auto;
   transition: background var(--transition-fast);
 }
 
-.menuBtn:hover { background: rgba(255,255,255,0.2); }
-
-.header--scrolled .menuBtn {
-  color: var(--clr-navy-800);
-  background: var(--color-bg-alt);
-}
+.menuBtn:hover { background: var(--clr-gray-100); }
 
 /* ---------- Mobile Menu ---------- */
 .mobileMenu {
@@ -228,8 +196,8 @@
 }
 
 .mobileNavLink:hover {
-  background: var(--color-bg-alt);
-  color: var(--color-primary);
+  background: var(--clr-teal-50);
+  color: var(--clr-teal-600);
 }
 
 .mobileCtas {
@@ -254,7 +222,7 @@
 .overlay {
   position: fixed;
   inset: 0;
-  background: rgba(8,18,30,0.4);
+  background: rgba(10,37,64,0.3);
   z-index: calc(var(--z-nav) - 2);
   backdrop-filter: blur(2px);
 }

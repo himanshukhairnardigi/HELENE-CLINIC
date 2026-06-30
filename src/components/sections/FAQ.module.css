@@ -47,7 +47,7 @@
 .icon {
   font-size: var(--text-xl);
   font-weight: var(--weight-light);
-  color: var(--clr-gold-400);
+  color: var(--clr-teal-500);
   flex-shrink: 0;
   line-height: 1;
 }

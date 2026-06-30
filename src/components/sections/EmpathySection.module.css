@@ -44,11 +44,11 @@
   text-align: center;
 }
 
-.tab:hover { color: var(--color-primary); background: rgba(26,50,73,0.04); }
+.tab:hover { color: var(--clr-teal-600); background: var(--clr-teal-50); }
 
 .tabActive {
   color: var(--color-primary);
-  border-bottom-color: var(--clr-gold-400);
+  border-bottom-color: var(--clr-teal-500);
   background: var(--clr-white);
   font-weight: var(--weight-semibold);
 }
@@ -75,7 +75,7 @@
 }
 
 .pointIcon {
-  color: var(--clr-gold-500);
+  color: var(--clr-teal-500);
   font-weight: var(--weight-bold);
   font-size: var(--text-lg);
   line-height: 1.4;
@@ -88,7 +88,7 @@
   color: var(--clr-gray-600);
   text-align: center;
   font-style: italic;
-  border-left: 3px solid var(--clr-gold-400);
+  border-left: 3px solid var(--clr-teal-500);
   padding-left: var(--space-5);
   text-align: left;
   margin-bottom: var(--space-8);
