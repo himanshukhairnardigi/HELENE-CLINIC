@@ -1,9 +1,13 @@
+import { useState } from 'react';
 import { HERO, CONTACT } from '../../data/siteData';
 import { Button } from '../ui/Button';
 import { IconWhatsApp, IconCheck } from '../ui/Icons';
 import styles from './Hero.module.css';
 
 export function Hero() {
+  const [activeIdx, setActiveIdx] = useState(0);
+  const active = HERO.headlines[activeIdx];
+
   return (
     <section className={styles.hero} id="top" aria-label="Hero">
       {/* Background */}
@@ -16,6 +20,21 @@ export function Hero() {
 
       <div className={styles.inner}>
         <div className={`container ${styles.contentWrap}`}>
+          {/* Condition toggle */}
+          <div className={styles.conditionToggle} role="tablist" aria-label="Select your condition">
+            {HERO.headlines.map((h, i) => (
+              <button
+                key={h.condition}
+                role="tab"
+                aria-selected={activeIdx === i}
+                className={`${styles.toggleBtn} ${activeIdx === i ? styles.toggleBtnActive : ''}`}
+                onClick={() => setActiveIdx(i)}
+              >
+                {h.condition === 'diabetes' ? '🩸 Diabetes' : '🦵 Knee Pain'}
+              </button>
+            ))}
+          </div>
+
           {/* Pre-heading */}
           <div className={styles.preheading} data-reveal="fade">
             <span className={styles.preheadingDot} aria-hidden="true" />
@@ -24,17 +43,12 @@ export function Hero() {
 
           {/* Headline */}
           <h1 className={styles.headline} data-reveal>
-            {HERO.headline.split('\n').map((line, i) => (
-              <span key={i} className={i === 1 ? styles.headlineGold : ''}>
-                {line}
-                {i < HERO.headline.split('\n').length - 1 && <br />}
-              </span>
-            ))}
+            {active.headline}
           </h1>
 
           {/* Subheadline */}
           <p className={styles.subheadline} data-reveal data-reveal-delay="1">
-            {HERO.subheadline}
+            {active.sub}
           </p>
 
           {/* Trust badges */}
@@ -49,22 +63,19 @@ export function Hero() {
 
           {/* CTAs */}
           <div className={styles.ctas} data-reveal data-reveal-delay="3">
-            <Button href={HERO.cta.primary.href} variant="primary" size="lg">
-              {HERO.cta.primary.label}
-            </Button>
-            <Button href={HERO.cta.secondary.href} variant="outline-light" size="lg">
-              {HERO.cta.secondary.label}
-            </Button>
             <a
               href={`https://wa.me/${CONTACT.whatsapp}`}
               target="_blank"
               rel="noopener noreferrer"
-              className={styles.waLink}
-              aria-label="Chat on WhatsApp"
+              className={styles.waPrimary}
+              aria-label="Talk to our medical team on WhatsApp"
             >
               <IconWhatsApp />
-              <span>WhatsApp Us</span>
+              <span>{HERO.cta.primary.label}</span>
             </a>
+            <Button href={HERO.cta.secondary.href} variant="outline-light" size="lg">
+              {HERO.cta.secondary.label}
+            </Button>
           </div>
         </div>
       </div>

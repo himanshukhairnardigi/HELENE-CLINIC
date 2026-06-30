@@ -1,25 +1,25 @@
 /* =================================================================
-   HELENE CLINIC INDIA — Complete Site Data
-   All content in one place. Nothing hardcoded in components.
+   HELENE CLINIC INDIA — Site Data (DOCX-sourced, India LP)
+   All content from the official India Landing Page brief.
    ================================================================= */
 
 export const META = {
-  title:       'Helene Clinic India | Advanced Stem Cell Therapy & Regenerative Medicine',
-  description: 'Experience world-class stem cell therapy in India. Helene Clinic combines 12+ years of Japanese research excellence with personalised care. 15,000+ treatments performed globally. Free consultation.',
-  keywords:    'stem cell therapy India, regenerative medicine India, MSC therapy, stem cell treatment Delhi Mumbai, Helene Clinic India',
-  canonical:   'https://heleneclinic.com/india_lp/',
-  ogImage:     '/og-helene-clinic-india.jpg',
+  title:         'Helene Clinic | Regenerative Medicine in Japan for Indian Patients',
+  description:   'Explore whether stem cell-based regenerative medicine in Japan could be suitable for your diabetes or knee condition. Speak with our medical experts. Free suitability assessment.',
+  keywords:      'stem cell therapy Japan, regenerative medicine Japan India, MSC therapy diabetes, knee osteoarthritis stem cell, Helene Clinic Japan',
+  canonical:     'https://heleneclinic.com/india_lp/',
+  ogImage:       '/og-helene-clinic-india.jpg',
   twitterHandle: '@heleneclinic',
-  locale:      'en_IN',
+  locale:        'en_IN',
 };
 
 export const CONTACT = {
-  phone:     '+91 98100 00000',
-  whatsapp:  '919810000000',
-  email:     'india@heleneclinic.com',
-  address:   'New Delhi, India',
-  hours:     'Mon–Sat, 9:00 AM – 6:00 PM IST',
-  clinicName: 'Helene Clinic India',
+  phone:      '+91 98100 00000',
+  whatsapp:   '919810000000',
+  email:      'india@heleneclinic.com',
+  address:    'Omotesando, Tokyo, Japan',
+  hours:      'Mon–Sat, 9:00 AM – 6:00 PM JST',
+  clinicName: 'Omotesando Helene Clinic',
 };
 
 export const NAV = {
@@ -30,412 +30,430 @@ export const NAV = {
   links: [
     { label: 'About',      href: '#about' },
     { label: 'Treatment',  href: '#treatment' },
+    { label: 'Research',   href: '#research' },
     { label: 'Process',    href: '#process' },
-    { label: 'Doctors',    href: '#doctors' },
-    { label: 'Results',    href: '#results' },
     { label: 'FAQ',        href: '#faq' },
   ],
-  cta: { label: 'Free Consultation', href: '#contact' },
+  cta: { label: 'Talk to Our Team', href: '#contact' },
 };
 
+/* ── HERO ── */
 export const HERO = {
-  preheading:  'Official India Programme',
-  headline:    'Reclaim Your\nHealth with Stem\nCell Therapy',
-  subheadline: 'Japan\'s most trusted regenerative medicine clinic — now accessible in India. Clinically proven MSC protocols, personalised care, measurable outcomes.',
+  preheading:  'Regenerative Medicine in Japan',
+  headlines: [
+    {
+      condition: 'diabetes',
+      headline:  'Still struggling with diabetes despite medications, diet and lifestyle changes?',
+      sub:       'Regenerative medicine in Japan can be an option worth discussing with our medical experts.',
+    },
+    {
+      condition: 'osteoarthritis',
+      headline:  'Tired of living with knee pain and being told surgery is your only option?',
+      sub:       'Discover whether stem cell-based regenerative medicine in Japan could be suitable for your condition.',
+    },
+  ],
+  /* default shown headline */
+  headline:    'Still struggling with diabetes despite medications, diet and lifestyle changes?',
+  subheadline: 'Regenerative medicine in Japan can be an option worth discussing with our medical experts.',
   cta: {
-    primary:   { label: 'Book Free Consultation', href: '#contact' },
-    secondary: { label: 'Explore Treatments',     href: '#treatment' },
+    primary:   { label: 'Talk to Our Medical Team on WhatsApp', href: '#contact' },
+    secondary: { label: 'Learn About Treatment',                href: '#about' },
   },
   trustBadges: [
-    '15,000+ Treatments Performed',
-    '12+ Years Clinical Excellence',
-    'ISO-Certified MSC Technology',
+    'Medical consultation by experts',
+    'Treatment performed in Japan',
+    'Regenerative medicine under Japanese regulatory framework',
+    'Personalised suitability assessment',
   ],
   stats: [
-    { value: '15,000+', label: 'Treatments\nPerformed' },
-    { value: '12+',     label: 'Years of\nResearch' },
-    { value: '5,000+',  label: 'International\nPatients' },
-    { value: '98%',     label: 'Patient\nSatisfaction' },
+    { value: '12+',    label: 'Years of\nExperience' },
+    { value: '2,504',  label: 'Patients in\nSafety Study' },
+    { value: '0.2%',   label: 'Major Adverse\nEvent Rate' },
+    { value: '40+',    label: 'Countries\nServed' },
   ],
 };
 
-export const ABOUT = {
-  preheading: 'About Helene Clinic',
-  headline:   'Precision Regenerative Medicine Rooted in Japanese Science',
-  body: [
-    'Founded in Tokyo\'s Omotesando district, Helene Clinic has pioneered the clinical application of Mesenchymal Stem Cells (MSCs) for over 12 years. Our proprietary "Helene Growth Medium" and multilayer culture process produce 2.25 billion highly pure MSCs — the highest quality achievable in clinical regenerative medicine.',
-    'The India Programme brings these same protocols, the same quality standards, and the same medical team to Indian patients. We believe that access to regenerative medicine should not be limited by geography.',
+/* ── EMPATHY SECTION ── */
+export const EMPATHY = {
+  headline: "If You're Reading This, You've Probably Already Tried Everything.",
+  intro:    "Maybe it's the diabetes that won't respond no matter how careful you are. Maybe it's the knee that makes you think twice before taking the stairs. Either way, you didn't land on this page by accident — you've already put in the work.",
+  tabs: [
+    {
+      label: 'For Diabetes',
+      key:   'diabetes',
+      points: [
+        'Years of metformin, insulin shots, and being told to "just manage your sugar"',
+        'An HbA1c number that refuses to move, no matter how disciplined you are with diet and exercise',
+        'The quiet, constant worry about complications — your kidneys, your eyes, your nerves',
+        'Doctors who treat the lab report in front of them, not the life you\'re trying to live',
+      ],
+    },
+    {
+      label: 'For Knee Pain',
+      key:   'osteoarthritis',
+      points: [
+        'Painkillers that dull the ache for a few hours and fix nothing',
+        'Physiotherapy that helps for a week, until the pain creeps back',
+        'Being told, sometimes as early as your 50s, that "replacement surgery is your only real option"',
+        'Skipping stairs, skipping walks, sitting out when your grandchildren want to play',
+      ],
+    },
   ],
-  pillars: [
+  closing: "Conventional treatment is built to manage symptoms. It was never designed to address what's happening inside your cells. That's the space regenerative medicine is being studied for — and why it matters which clinic you trust with it.",
+  cta:     { label: 'Talk to an Expert', href: '#contact' },
+};
+
+/* ── WHY REGEN ── */
+export const WHY_REGEN = {
+  headline: 'What makes regenerative medicine different?',
+  intro:    'Stem cells are being studied because of their potential regenerative and immunomodulatory properties. Researchers are exploring their role in:',
+  points: [
+    { icon: '🔬', title: 'Supporting tissue repair',         body: 'MSCs have been studied for their ability to support the body\'s natural repair processes at the cellular level.' },
+    { icon: '🧬', title: 'Reducing inflammation',           body: 'Mesenchymal stem cells exhibit immunomodulatory properties that may help reduce chronic systemic inflammation.' },
+    { icon: '⚙️', title: 'Improving cellular function',    body: 'Research suggests MSCs may support mitochondrial function and improve metabolic signalling in affected tissues.' },
+    { icon: '🌱', title: 'Supporting quality of life',     body: 'Multiple studies report patient-reported improvements in energy, mobility, and daily function following MSC therapy.' },
+  ],
+  disclaimer: 'Stem cell therapy is not appropriate for everyone, and individual outcomes can vary. Always seek medical advice for your specific situation.',
+};
+
+/* ── WHY JAPAN ── */
+export const WHY_JAPAN = {
+  headline: 'Why do international patients choose Japan for regenerative medicine?',
+  cards: [
     {
-      title:       'Scientific Rigour',
-      description: 'Every protocol is evidence-backed. Our research has been reviewed by leading international academics including faculty from the University of Cambridge.',
+      icon:  '🏛️',
+      title: 'Advanced regenerative medicine ecosystem',
+      body:  'Japan operates under a dedicated Act on the Safety of Regenerative Medicine — one of the world\'s most progressive frameworks for clinical stem cell therapy.',
     },
     {
-      title:       'Proprietary Technology',
-      description: 'Helene Growth Medium and our multilayer culture process produce pharmaceutical-grade MSCs — clinically validated, reproducible, and rigorously tested.',
+      icon:  '🔒',
+      title: 'High clinical standards',
+      body:  'Physician-supervised protocols, rigorous patient screening, and mandatory safety monitoring set Japan\'s clinical standards apart from many other destinations.',
     },
     {
-      title:       'Personalised Medicine',
-      description: 'No two patients are treated the same. Every plan is designed after comprehensive diagnostics and multidisciplinary specialist review.',
+      icon:  '🧫',
+      title: 'GMP-compliant cell processing',
+      body:  'Our Omotesando facility processes cells under pharmaceutical-grade Good Manufacturing Practice (GMP) conditions — ensuring consistent potency, purity, and safety.',
+    },
+    {
+      icon:  '👨‍⚕️',
+      title: 'Physician-supervised treatment protocols',
+      body:  'Every treatment plan is designed and administered by specialist physicians, not delegated to technicians. Medical oversight is present throughout your stay.',
+    },
+    {
+      icon:  '📚',
+      title: 'Long-standing expertise in stem cell research',
+      body:  'Japan has been at the forefront of stem cell research for decades. Helene Clinic draws on this institutional knowledge and clinical experience.',
     },
   ],
-  credentials: [
-    'ISO-Certified Cell Processing Facility',
-    'ICMR & CDSCO Compliant',
-    'Peer-Reviewed Research Published',
-    'Affiliated with Tokyo Medical Institutions',
+  cta: { label: 'Understand Treatment Options', href: '#treatment' },
+};
+
+/* ── WHY HELENE ── */
+export const WHY_HELENE = {
+  headline: 'Why Helene Clinic',
+  cards: [
+    { icon: '📅', title: 'More than a decade of regenerative medicine experience',    body: 'Helene Clinic has been performing regenerative medicine treatments since 2012 — building clinical knowledge across thousands of cases.' },
+    { icon: '💉', title: 'Thousands of stem cell administrations performed',          body: 'Our clinical experience spans a wide range of conditions, patient profiles, and treatment protocols.' },
+    { icon: '👩‍⚕️', title: 'Physician-led treatment protocols',                       body: 'Every patient receives a bespoke treatment plan designed by specialist physicians and reviewed by our medical board.' },
+    { icon: '🌍', title: 'International patient support',                             body: 'Dedicated coordinators guide patients from initial enquiry to post-treatment follow-up, in multiple languages.' },
+    { icon: '🛡️', title: 'Focus on patient safety and medical evaluation',           body: 'We will not offer treatment when evidence does not support it. Clinical integrity comes before case volume.' },
   ],
 };
 
-export const TREATMENTS = [
-  {
-    id:          'orthopedic',
-    icon:        'joint',
-    category:    'Orthopaedic & Sports',
-    headline:    'Joint & Cartilage Regeneration',
-    description: 'Our MSC intra-articular protocol delivers stem cells precisely to damaged joint tissue, stimulating cartilage regeneration and significantly reducing chronic inflammation — often eliminating the need for joint replacement surgery.',
-    conditions:  [
-      'Knee Osteoarthritis (Grade I–IV)',
-      'Hip Osteoarthritis',
-      'Rheumatoid Arthritis',
-      'Sports Injuries & Ligament Tears',
-      'Avascular Necrosis (AVN)',
-      'Degenerative Disc Disease',
-      'Shoulder & Rotator Cuff Conditions',
-      'Chronic Tendinopathy',
-    ],
-    outcomes:    'Average 68% reduction in VAS pain scores at 6 months.',
-    popular:     true,
-  },
-  {
-    id:          'neurological',
-    icon:        'brain',
-    category:    'Neurological',
-    headline:    'Neuro-Regenerative Therapy',
-    description: 'Our neural regeneration protocols harness the neuroprotective and neuroplasticity-enhancing properties of MSCs, delivered via intrathecal and intravenous routes, with structured rehabilitation integration.',
-    conditions:  [
-      'Cerebral Palsy',
-      'Autism Spectrum Disorder',
-      'Parkinson\'s Disease',
-      'Multiple Sclerosis',
-      'Spinal Cord Injury',
-      'Stroke Recovery & Rehabilitation',
-      'Traumatic Brain Injury',
-      'ALS (Amyotrophic Lateral Sclerosis)',
-    ],
-    outcomes:    'Progressive functional improvement reported in 82% of neurological cases.',
-    popular:     false,
-  },
-  {
-    id:          'autoimmune',
-    icon:        'shield',
-    category:    'Autoimmune & Systemic',
-    headline:    'Immune Modulation Therapy',
-    description: 'MSCs possess powerful immunomodulatory properties that rebalance dysregulated immune responses, reduce systemic inflammation, and support organ-specific regeneration in chronic autoimmune conditions.',
-    conditions:  [
-      'Systemic Lupus Erythematosus (SLE)',
-      'Crohn\'s Disease & Ulcerative Colitis',
-      'Type 1 Diabetes',
-      'COPD & Pulmonary Fibrosis',
-      'Liver Cirrhosis & NASH',
-      'Kidney Disease (CKD)',
-      'Scleroderma',
-      'Sjögren\'s Syndrome',
-    ],
-    outcomes:    'Measurable reduction in inflammatory biomarkers within 8–12 weeks.',
-    popular:     false,
-  },
-  {
-    id:          'antiaging',
-    icon:        'longevity',
-    category:    'Anti-Ageing & Longevity',
-    headline:    'Cellular Rejuvenation & Longevity',
-    description: 'Our premium longevity programme combines IV MSC infusion, exosome therapy, and NAD+ protocols to reverse cellular ageing markers, optimise mitochondrial function, and restore energy, cognition, and vitality.',
-    conditions:  [
-      'Cellular & Biological Age Reversal',
-      'Cognitive Performance Enhancement',
-      'Energy & Vitality Restoration',
-      'Hormonal & Metabolic Optimisation',
-      'Skin, Hair & Tissue Regeneration',
-      'Athletic Performance & Recovery',
-      'Executive Wellness Programmes',
-      'Post-COVID Syndrome (Long COVID)',
-    ],
-    outcomes:    'Average biological age reduction of 4.2 years (epigenetic markers) at 12 months.',
-    popular:     false,
-  },
-];
+/* ── RESEARCH SECTION ── */
+export const RESEARCH = {
+  headline: 'Research that informs our approach',
+  intro:    'Our clinical protocols are informed by published peer-reviewed research. Below are two key studies relevant to conditions we see most frequently.',
+  studies: [
+    {
+      id:       'safety',
+      badge:    'Safety Study',
+      headline: 'Intravenous MSC Safety — Retrospective Analysis',
+      detail:   'A retrospective study involving 2,504 patients receiving intravenous mesenchymal stem cell therapy reported:',
+      findings: [
+        'Major adverse cardiac and cerebrovascular event rate: 0.2%',
+        'Minor adverse events: 0.8%',
+        'No severe adverse events reported',
+      ],
+      note:     'These findings suggest a favorable safety profile, while further randomized studies are still needed.',
+    },
+    {
+      id:       'diabetes',
+      badge:    'Diabetes Study',
+      headline: 'Type 2 Diabetes — Single IV MSC Infusion',
+      detail:   'A study involving 61 patients with Type 2 Diabetes receiving a single intravenous MSC infusion reported:',
+      findings: [
+        'Average HbA1c reduction from 7.49% to 6.7%',
+        'Greater improvements observed in severe diabetes cases',
+        'Median follow-up exceeding three years',
+        'No serious adverse events reported',
+      ],
+      note:     'Further randomized controlled studies are required to validate these findings.',
+    },
+  ],
+  cta: { label: 'Discuss Whether You May Be a Suitable Candidate', href: '#contact' },
+};
 
-export const BENEFITS = [
-  {
-    icon:        'needle',
-    title:       'Minimally Invasive',
-    description: 'No surgery, no general anaesthesia. Most protocols are outpatient procedures using precision-guided micro-injections.',
-  },
-  {
-    icon:        'dna',
-    title:       'Addresses Root Cause',
-    description: 'MSCs stimulate the body\'s own repair mechanisms — not masking symptoms but enabling genuine biological regeneration.',
-  },
-  {
-    icon:        'clock',
-    title:       'Rapid Recovery',
-    description: 'Most patients resume normal activities within 24–72 hours. Typical treatment stay in India: 3–5 days.',
-  },
-  {
-    icon:        'globe',
-    title:       'World-Class Protocols',
-    description: 'The same pharmaceutical-grade MSC preparations and clinical protocols used at our Tokyo, London, and Dubai clinics.',
-  },
-  {
-    icon:        'shield-check',
-    title:       'Proven Safety Profile',
-    description: '15,000+ treatments with an exceptional safety record, ISO-certified cell processing, and full traceability on every preparation.',
-  },
-  {
-    icon:        'person',
-    title:       'Personalised Care',
-    description: 'No generic protocols. Every treatment plan is designed individually following comprehensive diagnostics and specialist review.',
-  },
-];
+/* ── VIDEO SECTION ── */
+export const VIDEO_SECTION = {
+  headline:    'See How It Actually Works, Inside Our Tokyo Clinic',
+  body:        'Rather than just take our word for it, here\'s a look inside the process itself — from how we collect and culture your own cells to how the infusion is administered, under Japan\'s regulatory framework for regenerative medicine.',
+  youtubeId:   'JxVk7_Kpvt0',
+  caption:     'Omotesando Helene Clinic — autologous stem cell collection, culturing, and administration.',
+};
 
+/* ── COMPARISON TABLES ── */
+export const COMPARISON = {
+  headline:    'What You\'ve Already Tried, vs. What This Offers',
+  intro:       "Before you decide whether this is worth exploring, here's an honest look at how it compares to treatments you've likely already tried in India.",
+  disclaimer:  'Cost figures shown for Indian treatment options are illustrative market ranges and may vary by provider, patient condition, and city. This is not a guarantee of outcome or savings. No treatment option is universally superior. Suitability depends on individual medical circumstances.',
+  tables: [
+    {
+      id:      'diabetes',
+      label:   'Type 2 Diabetes',
+      columns: ['Option', 'Typical Cost in India', 'Frequency', 'What It Targets', 'Key Limitation'],
+      rows: [
+        {
+          option:      'Oral hypoglycemics (e.g., metformin)',
+          cost:        '₹1,500–4,000/month',
+          frequency:   'Lifelong, daily',
+          targets:     'Blood sugar symptom control',
+          limitation:  "Doesn't address beta-cell decline; needs lifelong adherence",
+          highlight:   false,
+        },
+        {
+          option:      'Insulin therapy',
+          cost:        '₹3,000–9,000/month',
+          frequency:   'Lifelong, daily injections',
+          targets:     'Blood sugar control',
+          limitation:  "Doesn't address insulin resistance; daily injection burden",
+          highlight:   false,
+        },
+        {
+          option:      'Newer GLP-1 medications',
+          cost:        '₹6,000–18,000/month',
+          frequency:   'Lifelong',
+          targets:     'Blood sugar + weight',
+          limitation:  'High ongoing cost, indefinite use',
+          highlight:   false,
+        },
+        {
+          option:      'Bariatric/metabolic surgery',
+          cost:        '₹2,50,000–4,50,000 (one-time)',
+          frequency:   'One-time, major surgery',
+          targets:     'Severe insulin resistance',
+          limitation:  'Invasive, surgical risk, not suitable for everyone',
+          highlight:   false,
+        },
+        {
+          option:      'MSC IV therapy (Helene, Japan)',
+          cost:        'Speak with coordinator',
+          frequency:   'Single infusion, outpatient',
+          targets:     'Underlying inflammation & metabolic environment (per published data)',
+          limitation:  'Emerging therapy; long-term durability still being studied; travel required',
+          highlight:   true,
+        },
+      ],
+    },
+    {
+      id:      'osteoarthritis',
+      label:   'Knee Osteoarthritis',
+      columns: ['Option', 'Typical Cost in India', 'Frequency', 'What It Targets', 'Key Limitation'],
+      rows: [
+        {
+          option:      'NSAIDs / painkillers',
+          cost:        '₹1,000–3,000/month',
+          frequency:   'Lifelong, daily',
+          targets:     'Pain symptom relief',
+          limitation:  'No cartilage repair; long-term GI/kidney risk',
+          highlight:   false,
+        },
+        {
+          option:      'Physiotherapy',
+          cost:        '₹15,000–30,000/course',
+          frequency:   'Ongoing, weekly',
+          targets:     'Strength & mobility',
+          limitation:  "Requires continual sessions; doesn't stop progression",
+          highlight:   false,
+        },
+        {
+          option:      'Intra-articular injections (PRP/HA)',
+          cost:        '₹15,000–40,000/session',
+          frequency:   'Repeated every 6–12 months',
+          targets:     'Local joint lubrication/inflammation',
+          limitation:  'Localised & temporary effect',
+          highlight:   false,
+        },
+        {
+          option:      'Knee/hip replacement surgery',
+          cost:        '₹2,50,000–4,50,000/joint',
+          frequency:   'One-time, major surgery',
+          targets:     'Replaces the joint',
+          limitation:  'Invasive, surgical/anaesthesia risk, age limitations',
+          highlight:   false,
+        },
+        {
+          option:      'MSC IV therapy (Helene, Japan)',
+          cost:        'Speak with coordinator',
+          frequency:   'Single infusion, outpatient',
+          targets:     'Systemic anti-inflammatory & supportive effect',
+          limitation:  'Not a substitute for joint replacement in severe structural damage; emerging evidence',
+          highlight:   true,
+        },
+      ],
+    },
+  ],
+};
+
+/* ── PROCESS ── */
 export const PROCESS = [
   {
-    step:        '01',
-    phase:       'Enquiry',
-    title:       'Submit Your Case',
-    description: 'Complete our confidential medical enquiry form. Attach recent reports, imaging, or medical records. A Helene Clinic coordinator will respond within 24 hours.',
-    duration:    'Day 1',
+    step:  '01',
+    title: 'Share your medical reports on WhatsApp',
+    body:  'Send your recent blood reports, imaging, or medical history to our team on WhatsApp. No commitment required at this stage.',
+    icon:  '💬',
   },
   {
-    step:        '02',
-    phase:       'Evaluation',
-    title:       'Specialist Case Review',
-    description: 'Your case is reviewed by our multidisciplinary team in Tokyo and India. We assess suitability, determine the optimal protocol, and share a detailed treatment plan with expected outcomes and costs — at no charge.',
-    duration:    '24–48 hours',
+    step:  '02',
+    title: 'Initial review by medical team',
+    body:  'Our physicians review your case and assess whether regenerative medicine may be appropriate for your specific condition.',
+    icon:  '🔍',
   },
   {
-    step:        '03',
-    phase:       'Diagnostics',
-    title:       'Comprehensive Workup',
-    description: 'On arrival in India, you undergo a full diagnostic evaluation: blood panels, advanced imaging, specialist assessments, and baseline biomarker mapping to inform your personalised protocol.',
-    duration:    'Day 1–2 in India',
+    step:  '03',
+    title: 'Suitability assessment',
+    body:  'You receive a personalised suitability assessment — honest, evidence-based, and at no cost to you.',
+    icon:  '📋',
   },
   {
-    step:        '04',
-    phase:       'Treatment',
-    title:       'MSC Administration',
-    description: 'Your stem cell therapy is delivered in our ISO-certified suite. Routes of administration (intravenous, intra-articular, intrathecal) depend on your condition. Most sessions take 1–3 hours under specialist supervision.',
-    duration:    'Day 2–4 in India',
+    step:  '04',
+    title: 'Treatment discussion and planning',
+    body:  'If appropriate, our team walks you through the proposed protocol, expected outcomes, costs, and your Japan visit itinerary.',
+    icon:  '🗓️',
   },
   {
-    step:        '05',
-    phase:       'Recovery',
-    title:       'Post-Treatment Monitoring',
-    description: 'Our clinical team monitors your response for 24–48 hours. You receive a personalised recovery protocol, dietary guidance, and 24/7 access to your dedicated care coordinator.',
-    duration:    'Day 4–5 in India',
+    step:  '05',
+    title: 'Travel to Japan if appropriate',
+    body:  'Most patients spend 4–6 days in Japan. We assist with visa letters, airport transfers, and accommodation.',
+    icon:  '✈️',
   },
   {
-    step:        '06',
-    phase:       'Follow-Up',
-    title:       'Long-Term Outcomes Tracking',
-    description: 'Structured teleconsultation check-ins at 1, 3, 6, and 12 months. Biomarker retesting confirms objective improvement. Our team remains available throughout your recovery.',
-    duration:    '12-month programme',
+    step:  '06',
+    title: 'Post-treatment follow-up guidance',
+    body:  'Structured check-ins at 1, 3, 6, and 12 months. Your coordinator remains available throughout your recovery.',
+    icon:  '📞',
   },
 ];
 
+/* ── ELIGIBILITY ── */
 export const ELIGIBILITY = {
-  preheading: 'Patient Eligibility',
-  headline:   'Are You a Candidate for Stem Cell Therapy?',
-  intro:      'Our specialists individually assess every patient. Stem cell therapy is not suitable for all conditions or individuals. Common candidate profiles include:',
+  headline: 'Am I a Candidate?',
+  intro:    'Eligibility depends on your medical history, reports, and physician assessment. We assess every patient individually.',
   suitable: [
-    'Orthopaedic patients unresponsive to conventional treatment or facing surgery',
-    'Neurological patients with stable condition seeking functional improvement',
-    'Chronic autoimmune patients with ongoing inflammation despite medication',
-    'Individuals seeking to reduce reliance on long-term pharmaceutical therapy',
-    'Patients aged 18–80 with no active malignancy',
-    'International patients seeking credentialed alternatives to home-country options',
-    'Wellness-oriented individuals interested in longevity and cellular optimisation',
+    'Adults with Type 2 Diabetes not adequately controlled with current medications',
+    'Knee or hip osteoarthritis patients seeking alternatives to surgery',
+    'Patients with chronic inflammation unresponsive to conventional treatment',
+    'Individuals aged 18–80 with no active malignancy',
+    'Patients in stable health seeking functional improvement',
+    'Those willing to travel to Japan for treatment',
   ],
   notSuitable: [
     'Active cancer or haematological malignancy',
-    'Uncontrolled active systemic infection',
+    'Uncontrolled systemic infection',
     'Pregnancy or breastfeeding',
     'Severe coagulopathy or active bleeding disorder',
     'Major surgery within the preceding 4 weeks',
     'Unstable cardiac or pulmonary conditions',
   ],
-  note:        'This list is indicative only. All eligibility decisions are made by our medical team following full case review.',
+  note: 'This list is indicative only. All eligibility decisions are made by our medical team following full case review. We will never offer treatment where evidence does not support it.',
 };
 
-export const DOCTORS = [
-  {
-    id:             'dr-sharma',
-    name:           'Dr. Priya Sharma',
-    credentials:    'MD, MSc Regenerative Medicine',
-    specialisation: 'Orthopaedic & Joint Regeneration',
-    experience:     '18 years clinical experience',
-    institutions: [
-      'MBBS — All India Institute of Medical Sciences, New Delhi',
-      'MD — Maulana Azad Medical College',
-      'MSc Regenerative Medicine — University of Tokyo',
-      'Fellowship — Stem Cell Research, Kyoto University',
-    ],
-    bio:  'Dr. Sharma leads our orthopaedic regeneration programme in India and has treated over 2,400 joint patients across India and Japan. Her research on MSC-driven cartilage regeneration has been peer-reviewed and published in international regenerative medicine journals. She is fluent in English, Hindi, and conversational Japanese.',
-    focus: ['Knee & Hip Osteoarthritis', 'AVN', 'Sports Injuries', 'Rheumatoid Arthritis'],
-  },
-  {
-    id:             'dr-mehta',
-    name:           'Dr. Arjun Mehta',
-    credentials:    'DM Neurology, PhD Stem Cell Neuroscience',
-    specialisation: 'Neurological Regeneration',
-    experience:     '15 years clinical experience',
-    institutions: [
-      'MBBS — KEM Hospital, Mumbai',
-      'DM Neurology — NIMHANS Bangalore',
-      'PhD Stem Cell Neuroscience — Tokyo Medical University',
-      'Post-Doctoral Research — Riken Institute, Kobe',
-    ],
-    bio:  'Dr. Mehta specialises in neurological applications of stem cell therapy, with particular focus on cerebral palsy, autism, Parkinson\'s disease, and spinal cord injury. He pioneered India\'s first standardised MSC protocol for autism and has published 14 papers on neurological regeneration. He lectures internationally on the clinical translation of neuro-regenerative medicine.',
-    focus: ['Cerebral Palsy', 'Autism', 'Parkinson\'s', 'Spinal Cord Injury'],
-  },
-];
-
+/* ── TESTIMONIALS ── */
 export const TESTIMONIALS = [
   {
-    id:        'rajesh-k',
-    name:      'Rajesh Kumar',
-    age:       54,
-    location:  'Dubai, UAE',
-    condition: 'Knee Osteoarthritis (Grade III)',
+    name:      'Rajesh K.',
+    location:  'Mumbai, India',
+    condition: 'Knee Osteoarthritis',
     rating:    5,
-    headline:  '"I was told surgery was the only option. Today I walk 12km daily."',
-    quote:     'After three years of progressive knee pain and being told at 54 that I needed a total knee replacement, I was unwilling to accept that. Helene Clinic\'s team reviewed my case within hours and outlined a realistic alternative. Six months post-treatment, my MRI shows measurable cartilage regeneration. I walk 12 kilometres daily without pain. The care — from the first call to the 6-month follow-up — was exceptional at every stage.',
-    outcome:   'Avoided total knee replacement. Full mobility restored at 6 months.',
-    verified:  true,
+    quote:     'I was told surgery was my only option. After speaking with the Helene team and travelling to Japan, the improvement has been remarkable. I\'m walking without pain for the first time in years.',
   },
   {
-    id:        'sunita-p',
-    name:      'Sunita & Nikhil Patel',
-    age:       null,
-    location:  'London, UK',
-    condition: 'Cerebral Palsy — Child, Age 7',
+    name:      'Priya S.',
+    location:  'Delhi, India',
+    condition: 'Type 2 Diabetes',
     rating:    5,
-    headline:  '"The improvement in our son\'s motor function has been remarkable."',
-    quote:     'We travelled from London with our 7-year-old son, deeply sceptical but running out of options. Dr. Mehta\'s expertise and the team\'s compassion gave us confidence from the first consultation. Over two treatment cycles, the improvement in our son\'s gross motor function, balance, and communication has been remarkable — well beyond what his therapists had projected. We are deeply grateful.',
-    outcome:   'Significant improvement in gross motor function, balance, and communication.',
-    verified:  true,
+    quote:     'My HbA1c had not moved in two years despite everything I tried. After treatment in Tokyo, my numbers improved in a way my own doctor found difficult to believe. I\'m genuinely hopeful for the first time.',
   },
   {
-    id:        'michael-c',
-    name:      'Michael Chen',
-    age:       61,
-    location:  'Singapore',
-    condition: 'Parkinson\'s Disease (Early Stage)',
+    name:      'Anand M.',
+    location:  'Bangalore, India',
+    condition: 'Knee Osteoarthritis',
     rating:    5,
-    headline:  '"My neurologist back home is amazed at the reduction in my tremors."',
-    quote:     'I was initially sceptical — I have a scientific background and needed evidence, not hope. The team at Helene Clinic presented clear clinical data, were transparent about expected outcomes, and did not oversell. Eight months on, my resting tremors have reduced by roughly 60% and I have reduced one of my medications under my neurologist\'s guidance. The evidence-based approach won my trust completely.',
-    outcome:   '~60% reduction in resting tremors. Medication reduced under medical supervision.',
-    verified:  true,
+    quote:     'The team was completely transparent — they told me exactly what to expect and didn\'t oversell. The process was smooth, the Tokyo clinic was world-class, and I have my mobility back.',
   },
   {
-    id:        'fatima-h',
-    name:      'Fatima Al-Hassan',
-    age:       38,
-    location:  'Riyadh, Saudi Arabia',
-    condition: 'Systemic Lupus Erythematosus (SLE)',
+    name:      'Sunita R.',
+    location:  'Hyderabad, India',
+    condition: 'Type 2 Diabetes',
     rating:    5,
-    headline:  '"Years of medication side-effects, then real improvement within weeks."',
-    quote:     'Living with SLE for 12 years meant constant medication and its side effects. Within six weeks of my first treatment, my CRP and ESR levels dropped significantly — numbers my rheumatologist had not seen in years. My fatigue, joint pain, and skin symptoms have all improved measurably. I am not cured, but I have my life back in a way I had forgotten was possible.',
-    outcome:   'CRP & ESR normalised. Reduced flare frequency. Quality of life significantly restored.',
-    verified:  true,
+    quote:     'What struck me most was the honesty. They told me there are no guarantees, but gave me the research. Six months later, my medication has been reduced and I feel a quality of life I had lost years ago.',
   },
 ];
 
+/* ── FAQS ── */
 export const FAQS = [
   {
-    question: 'What exactly are Mesenchymal Stem Cells (MSCs) and why does Helene Clinic use them?',
-    answer:   'Mesenchymal Stem Cells (MSCs) are multipotent stromal cells that can differentiate into bone, cartilage, muscle, and fat tissue. More critically for treatment, they release paracrine signals — growth factors and cytokines — that orchestrate the body\'s own repair response, suppress excessive inflammation, and promote vascularisation. Helene Clinic exclusively uses MSCs because they have the strongest clinical safety profile and the broadest therapeutic evidence base among all stem cell types. Our proprietary Helene Growth Medium allows us to culture 2.25 billion highly pure MSCs — the highest clinically achievable purity.',
+    q: 'Is stem cell therapy legal in Japan?',
+    a: 'Regenerative medicine in Japan operates under specific regulatory frameworks and treatment protocols, including the Act on the Safety of Regenerative Medicine. Helene Clinic complies with all applicable Japanese regulatory standards governing stem cell administration.',
   },
   {
-    question: 'What is the source of the stem cells used?',
-    answer:   'We use allogeneic (donor-derived) MSCs sourced from ethically screened, consented donors — primarily Wharton\'s jelly (umbilical cord tissue), which produces young, highly proliferative cells with superior potency compared to autologous (self-derived) cells, especially in older patients. All donor material is rigorously screened for infectious agents, genetic abnormalities, and batch-tested for purity, viability, and potency before clinical use. Full traceability is maintained for every preparation.',
+    q: 'Can you guarantee results?',
+    a: 'No. Individual outcomes vary and no medical treatment can guarantee specific results. We present published research findings transparently and set realistic, condition-specific expectations during your pre-treatment consultation. We will not offer treatment when evidence does not support a patient\'s specific case.',
   },
   {
-    question: 'How safe is stem cell therapy? What are the risks?',
-    answer:   'Our 15,000+ treatment history demonstrates an exceptional safety record. Common temporary reactions include mild fever, local injection-site soreness, and transient fatigue — typically resolving within 24–72 hours. Serious adverse events are rare. We exclude patients with active malignancy, severe coagulopathy, or active infection. All procedures are performed by experienced specialists in our ISO-certified facility with full emergency protocols in place. We discuss your individual risk profile completely and transparently before any treatment begins.',
+    q: 'How do I know if I am eligible?',
+    a: 'Eligibility depends on your medical history, reports, and physician assessment. Share your recent medical reports with us on WhatsApp and our team will conduct a no-obligation suitability review. This process is free of charge.',
   },
   {
-    question: 'How long does treatment take? What is the India visit duration?',
-    answer:   'Most patients spend 4–6 days in India for the full programme: arrival/diagnostics (day 1–2), treatment administration (day 2–4), monitoring and discharge (day 5–6). Some neurological protocols may require 7 days. Complex or multi-condition cases may benefit from a second visit 3–6 months later. Your personalised plan will specify the exact itinerary before you commit to travel.',
+    q: 'How much does treatment cost?',
+    a: 'Treatment recommendations and associated costs depend on individual evaluation, condition severity, and treatment plans. Please speak with our coordinator for a personalised cost estimate after your suitability assessment.',
   },
   {
-    question: 'When can I expect to see results?',
-    answer:   'Results timeline varies significantly by condition and individual biology. Orthopaedic patients commonly notice meaningful pain reduction within 4–8 weeks, with progressive improvement over 3–6 months as tissue regeneration matures. Neurological patients typically see gradual, cumulative improvement over 6–18 months. Anti-ageing patients often notice energy and sleep improvements within 2–4 weeks. We never guarantee outcomes — we set realistic, condition-specific expectations during your pre-treatment consultation.',
+    q: 'Is stem cell therapy safe?',
+    a: 'Published studies have reported favorable safety outcomes, including a retrospective study of 2,504 patients that reported a major adverse event rate of 0.2%. All medical treatments involve potential risks and should be discussed with your physician. We screen every patient thoroughly before recommending treatment.',
   },
   {
-    question: 'How does Helene Clinic India compare in cost to treatment in Japan, UK, or USA?',
-    answer:   'India pricing represents a 50–70% reduction compared to equivalent treatment at our Tokyo, London, or Dubai clinics, without any compromise in the quality of cell preparation, clinical protocols, or specialist expertise. The same MSC preparations produced in our ISO-certified Tokyo facility are used in India. Treatment costs depend on condition, number of doses, and protocol complexity — your specialist will provide a complete, transparent cost breakdown after initial case review.',
+    q: 'Do I need to travel to Japan?',
+    a: 'Yes. Treatment is performed at our Omotesando Helene Clinic in Tokyo. Most patients require a stay of approximately 4–6 days. We assist with invitation letters for visa purposes, airport transfers, and preferred accommodation options near the clinic.',
   },
   {
-    question: 'Is stem cell therapy legal and regulated in India?',
-    answer:   'Yes. Stem cell therapy in India is regulated by the Indian Council of Medical Research (ICMR) and the Central Drugs Standard Control Organisation (CDSCO). Helene Clinic operates in full compliance with all Indian regulatory guidelines. We are transparent about the specific regulatory classification of each treatment we offer and only administer protocols that meet current Indian regulatory standards. We strongly advise patients to avoid providers who cannot demonstrate clear regulatory compliance.',
-  },
-  {
-    question: 'Do you assist with travel, accommodation, and logistics for international patients?',
-    answer:   'Yes, comprehensively. Our India Patient Services team provides: invitation/visa support letters, airport transfer arrangements, preferred-rate hotel partnerships near the clinic, translation services in multiple languages, and a dedicated care coordinator who remains your single point of contact from initial enquiry through 12-month follow-up. We have served patients from over 40 countries and are experienced in every aspect of international medical travel.',
-  },
-  {
-    question: 'What conditions do you NOT treat?',
-    answer:   'We do not treat patients with active cancer or haematological malignancy, uncontrolled systemic infection, pregnancy or breastfeeding, severe coagulopathy, recent major surgery (within 4 weeks), or unstable cardiac/pulmonary conditions. We are also honest when a patient\'s condition is unlikely to benefit from stem cell therapy — we will not offer treatment when evidence does not support it. Our reputation rests on clinical integrity, not volume.',
+    q: 'How do I get started?',
+    a: 'The simplest first step is to share your recent medical reports with us on WhatsApp. Our medical team will review your case and come back to you with an honest assessment of whether treatment may be suitable. No obligation, no cost.',
   },
 ];
 
-export const WHYUS = [
-  {
-    stat:    '15,000+',
-    label:   'Treatments Performed',
-    detail:  'Globally across our Tokyo, London, Dubai and India programmes.',
-  },
-  {
-    stat:    '12 Years',
-    label:   'Clinical Research',
-    detail:  'Pioneering MSC therapy since 2012 — not experimental, established.',
-  },
-  {
-    stat:    '98%',
-    label:   'Patient Satisfaction',
-    detail:  'Independently collected across all programmes and conditions.',
-  },
-  {
-    stat:    '40+',
-    label:   'Countries Served',
-    detail:  'Dedicated international patient pathways in every programme.',
-  },
-];
-
+/* ── FOOTER ── */
 export const FOOTER = {
-  tagline:      'Japan\'s most trusted regenerative medicine clinic. Now in India.',
-  disclaimer:   'Medical Disclaimer: Stem cell therapy outcomes vary between individuals. Nothing on this website constitutes medical advice. Treatment decisions should always be made in consultation with a qualified medical professional. Helene Clinic India operates in compliance with ICMR and CDSCO regulatory guidelines.',
+  tagline:    'Regenerative medicine in Japan, accessible to patients from India.',
+  disclaimer: 'Medical Disclaimer: Stem cell therapy outcomes vary between individuals. Published research findings referenced on this page represent study results and may not reflect individual outcomes. Nothing on this website constitutes medical advice. Treatment decisions should always be made in consultation with a qualified medical professional. Regenerative medicine in Japan operates under specific regulatory frameworks. Suitability for treatment is determined by physician assessment on a case-by-case basis.',
   columns: [
     {
-      heading: 'Treatments',
+      heading: 'Conditions',
       links: [
-        { label: 'Orthopaedic & Joint',  href: '#treatment' },
-        { label: 'Neurological',          href: '#treatment' },
-        { label: 'Autoimmune',            href: '#treatment' },
-        { label: 'Anti-Ageing & Longevity', href: '#treatment' },
+        { label: 'Type 2 Diabetes',     href: '#treatment' },
+        { label: 'Knee Osteoarthritis', href: '#treatment' },
+        { label: 'Other Conditions',    href: '#contact' },
       ],
     },
     {
-      heading: 'Company',
+      heading: 'Information',
       links: [
-        { label: 'About Helene Clinic', href: '#about' },
-        { label: 'Our Doctors',         href: '#doctors' },
-        { label: 'Our Process',         href: '#process' },
-        { label: 'Patient Results',     href: '#results' },
-        { label: 'FAQ',                 href: '#faq' },
+        { label: 'Why Japan',    href: '#why-japan' },
+        { label: 'Why Helene',  href: '#about' },
+        { label: 'Research',    href: '#research' },
+        { label: 'Our Process', href: '#process' },
+        { label: 'FAQ',         href: '#faq' },
       ],
     },
     {
@@ -444,34 +462,23 @@ export const FOOTER = {
         { label: 'Privacy Policy',     href: '/privacy' },
         { label: 'Terms of Service',   href: '/terms' },
         { label: 'Medical Disclaimer', href: '/disclaimer' },
-        { label: 'Cookie Policy',      href: '/cookies' },
       ],
     },
   ],
   social: [
-    { platform: 'YouTube',   href: 'https://www.youtube.com/@helene_clinic',         label: 'Helene Clinic on YouTube' },
-    { platform: 'Instagram', href: 'https://www.instagram.com/helene_omotesandou/',  label: 'Helene Clinic on Instagram' },
+    { platform: 'YouTube',   href: 'https://www.youtube.com/@helene_clinic',        label: 'Helene Clinic on YouTube' },
+    { platform: 'Instagram', href: 'https://www.instagram.com/helene_omotesandou/', label: 'Helene Clinic on Instagram' },
   ],
 };
 
+/* ── INQUIRY FORM ── */
 export const INQUIRY_CONDITIONS = [
+  'Type 2 Diabetes',
   'Knee Osteoarthritis',
   'Hip Osteoarthritis',
   'Rheumatoid Arthritis',
-  'Sports Injury / Ligament',
-  'Avascular Necrosis (AVN)',
-  'Degenerative Disc Disease',
-  'Cerebral Palsy',
-  'Autism Spectrum Disorder',
-  "Parkinson's Disease",
-  'Multiple Sclerosis',
-  'Spinal Cord Injury',
-  'Stroke Recovery',
-  'Lupus (SLE)',
-  "Crohn's Disease",
-  'Type 1 Diabetes',
-  'COPD / Pulmonary Fibrosis',
-  'Liver Disease',
+  'Other Autoimmune Condition',
+  'Neurological Condition',
   'Anti-Ageing / Longevity',
-  'Other',
+  'Other — Please describe',
 ];

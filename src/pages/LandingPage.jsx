@@ -2,21 +2,24 @@ import { lazy, Suspense } from 'react';
 import { Navbar } from '../components/layout/Navbar';
 import { Footer } from '../components/layout/Footer';
 import { Hero } from '../components/sections/Hero';
-import { FloatingWhatsApp } from '../components/sections/FloatingWhatsApp';
+import { StickyCTA } from '../components/sections/StickyCTA';
 
-const About = lazy(() => import('../components/sections/About').then(m => ({ default: m.About })));
-const TreatmentSection = lazy(() => import('../components/sections/TreatmentSection').then(m => ({ default: m.TreatmentSection })));
-const Benefits = lazy(() => import('../components/sections/Benefits').then(m => ({ default: m.Benefits })));
-const WhyUs = lazy(() => import('../components/sections/WhyUs').then(m => ({ default: m.WhyUs })));
-const Process = lazy(() => import('../components/sections/Process').then(m => ({ default: m.Process })));
-const Eligibility = lazy(() => import('../components/sections/Eligibility').then(m => ({ default: m.Eligibility })));
-const Doctors = lazy(() => import('../components/sections/Doctors').then(m => ({ default: m.Doctors })));
-const Testimonials = lazy(() => import('../components/sections/Testimonials').then(m => ({ default: m.Testimonials })));
-const FAQ = lazy(() => import('../components/sections/FAQ').then(m => ({ default: m.FAQ })));
-const ContactForm = lazy(() => import('../components/sections/ContactForm').then(m => ({ default: m.ContactForm })));
+/* Lazy-loaded sections — ordered per DOCX structure */
+const EmpathySection   = lazy(() => import('../components/sections/EmpathySection').then(m => ({ default: m.EmpathySection })));
+const WhyRegenSection  = lazy(() => import('../components/sections/WhyRegenSection').then(m => ({ default: m.WhyRegenSection })));
+const WhyJapanSection  = lazy(() => import('../components/sections/WhyJapanSection').then(m => ({ default: m.WhyJapanSection })));
+const WhyHeleneSection = lazy(() => import('../components/sections/WhyHeleneSection').then(m => ({ default: m.WhyHeleneSection })));
+const ResearchSection  = lazy(() => import('../components/sections/ResearchSection').then(m => ({ default: m.ResearchSection })));
+const VideoSection     = lazy(() => import('../components/sections/VideoSection').then(m => ({ default: m.VideoSection })));
+const ComparisonSection= lazy(() => import('../components/sections/ComparisonSection').then(m => ({ default: m.ComparisonSection })));
+const Process          = lazy(() => import('../components/sections/Process').then(m => ({ default: m.Process })));
+const Eligibility      = lazy(() => import('../components/sections/Eligibility').then(m => ({ default: m.Eligibility })));
+const Testimonials     = lazy(() => import('../components/sections/Testimonials').then(m => ({ default: m.Testimonials })));
+const FAQ              = lazy(() => import('../components/sections/FAQ').then(m => ({ default: m.FAQ })));
+const ContactForm      = lazy(() => import('../components/sections/ContactForm').then(m => ({ default: m.ContactForm })));
 
-function SectionFallback() {
-  return <div style={{ height: '200px' }} aria-hidden="true" />;
+function Fallback() {
+  return <div style={{ minHeight: '160px' }} aria-hidden="true" />;
 }
 
 export function LandingPage() {
@@ -24,40 +27,49 @@ export function LandingPage() {
     <>
       <Navbar />
       <main id="main-content">
+        {/* Section 1 — Hero with condition toggle */}
         <Hero />
-        <Suspense fallback={<SectionFallback />}>
-          <About />
-        </Suspense>
-        <Suspense fallback={<SectionFallback />}>
-          <TreatmentSection />
-        </Suspense>
-        <Suspense fallback={<SectionFallback />}>
-          <Benefits />
-        </Suspense>
-        <Suspense fallback={<SectionFallback />}>
-          <WhyUs />
-        </Suspense>
-        <Suspense fallback={<SectionFallback />}>
-          <Process />
-        </Suspense>
-        <Suspense fallback={<SectionFallback />}>
-          <Eligibility />
-        </Suspense>
-        <Suspense fallback={<SectionFallback />}>
-          <Doctors />
-        </Suspense>
-        <Suspense fallback={<SectionFallback />}>
-          <Testimonials />
-        </Suspense>
-        <Suspense fallback={<SectionFallback />}>
-          <FAQ />
-        </Suspense>
-        <Suspense fallback={<SectionFallback />}>
-          <ContactForm />
-        </Suspense>
+
+        {/* Section 2 — Empathy / "You've tried everything" */}
+        <Suspense fallback={<Fallback />}><EmpathySection /></Suspense>
+
+        {/* Section 3 — What makes regen medicine different */}
+        <Suspense fallback={<Fallback />}><WhyRegenSection /></Suspense>
+
+        {/* Section 4 — Why Japan */}
+        <Suspense fallback={<Fallback />}><WhyJapanSection /></Suspense>
+
+        {/* Section 5 — Why Helene Clinic */}
+        <Suspense fallback={<Fallback />}><WhyHeleneSection /></Suspense>
+
+        {/* Section 6 — Clinical research / evidence */}
+        <Suspense fallback={<Fallback />}><ResearchSection /></Suspense>
+
+        {/* Section 8 — Video */}
+        <Suspense fallback={<Fallback />}><VideoSection /></Suspense>
+
+        {/* Section 9 — Comparison tables */}
+        <Suspense fallback={<Fallback />}><ComparisonSection /></Suspense>
+
+        {/* Section 10 — Treatment journey / process */}
+        <Suspense fallback={<Fallback />}><Process /></Suspense>
+
+        {/* Eligibility */}
+        <Suspense fallback={<Fallback />}><Eligibility /></Suspense>
+
+        {/* Testimonials */}
+        <Suspense fallback={<Fallback />}><Testimonials /></Suspense>
+
+        {/* Section 11 — FAQ */}
+        <Suspense fallback={<Fallback />}><FAQ /></Suspense>
+
+        {/* Contact form */}
+        <Suspense fallback={<Fallback />}><ContactForm /></Suspense>
       </main>
       <Footer />
-      <FloatingWhatsApp />
+
+      {/* Sticky bottom WhatsApp CTA bar */}
+      <StickyCTA />
     </>
   );
 }

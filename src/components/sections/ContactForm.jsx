@@ -1,8 +1,6 @@
 import { useForm } from 'react-hook-form';
 import { CONTACT, INQUIRY_CONDITIONS } from '../../data/siteData';
 import { SectionLabel } from '../ui/SectionLabel';
-import { Heading } from '../ui/Heading';
-import { Divider } from '../ui/Divider';
 import { Button } from '../ui/Button';
 import { IconPhone, IconMail, IconMap, IconWhatsApp } from '../ui/Icons';
 import { useReveal } from '../../hooks/useReveal';
@@ -34,12 +32,9 @@ export function ContactForm() {
             <span className={styles.successIcon} aria-hidden="true">✓</span>
             <h2 className={styles.successTitle}>Thank You!</h2>
             <p className={styles.successText}>
-              Your enquiry has been received. Our medical coordinator will contact you
-              within 24 hours to discuss your case.
+              Your enquiry has been received. Our medical coordinator will contact you within 24 hours.
             </p>
-            <Button variant="outline" onClick={() => reset()}>
-              Submit Another Enquiry
-            </Button>
+            <Button variant="outline" onClick={() => reset()}>Submit Another Enquiry</Button>
           </div>
         </div>
       </section>
@@ -50,11 +45,44 @@ export function ContactForm() {
     <section className={`section section--light ${styles.contact}`} id="contact" ref={ref}>
       <div className="container">
         <div className={styles.intro} data-reveal>
-          <SectionLabel>Free Consultation</SectionLabel>
-          <Heading sub="No obligation — our specialists will assess your case and guide you">
-            Request Your Free Consultation
-          </Heading>
-          <Divider />
+          <SectionLabel>Get in Touch</SectionLabel>
+          <h2 className={styles.headline}>Speak with Our Medical Team</h2>
+          <p className={styles.lead}>
+            Share your medical reports and we'll assess whether treatment may be suitable for you.
+            No obligation, no cost.
+          </p>
+        </div>
+
+        {/* WhatsApp — primary method */}
+        <div className={styles.waPrimary} data-reveal>
+          <div className={styles.waCard}>
+            <div className={styles.waIcon} aria-hidden="true">
+              <IconWhatsApp />
+            </div>
+            <div>
+              <h3 className={styles.waTitle}>The fastest way — WhatsApp</h3>
+              <p className={styles.waBody}>
+                Send your recent blood reports, imaging, or a brief description of your condition directly on WhatsApp.
+                Our team responds within hours.
+              </p>
+            </div>
+            <a
+              href={`https://wa.me/${CONTACT.whatsapp}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.waBtn}
+              aria-label="Chat on WhatsApp"
+            >
+              <IconWhatsApp />
+              <span>Open WhatsApp</span>
+            </a>
+          </div>
+        </div>
+
+        <div className={styles.dividerRow} data-reveal>
+          <span className={styles.dividerLine} />
+          <span className={styles.dividerText}>or fill in the form below</span>
+          <span className={styles.dividerLine} />
         </div>
 
         <div className={styles.layout}>
@@ -73,35 +101,7 @@ export function ContactForm() {
                   {errors.firstName && <span className={styles.error} role="alert">{errors.firstName.message}</span>}
                 </div>
                 <div className={styles.field}>
-                  <label htmlFor="lastName" className={styles.label}>Last Name *</label>
-                  <input
-                    id="lastName"
-                    type="text"
-                    autoComplete="family-name"
-                    className={`${styles.input} ${errors.lastName ? styles.inputError : ''}`}
-                    {...register('lastName', { required: 'Last name is required' })}
-                  />
-                  {errors.lastName && <span className={styles.error} role="alert">{errors.lastName.message}</span>}
-                </div>
-              </div>
-
-              <div className={styles.row}>
-                <div className={styles.field}>
-                  <label htmlFor="email" className={styles.label}>Email Address *</label>
-                  <input
-                    id="email"
-                    type="email"
-                    autoComplete="email"
-                    className={`${styles.input} ${errors.email ? styles.inputError : ''}`}
-                    {...register('email', {
-                      required: 'Email is required',
-                      pattern: { value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/, message: 'Enter a valid email address' },
-                    })}
-                  />
-                  {errors.email && <span className={styles.error} role="alert">{errors.email.message}</span>}
-                </div>
-                <div className={styles.field}>
-                  <label htmlFor="phone" className={styles.label}>Phone / WhatsApp *</label>
+                  <label htmlFor="phone" className={styles.label}>WhatsApp / Phone *</label>
                   <input
                     id="phone"
                     type="tel"
@@ -114,19 +114,22 @@ export function ContactForm() {
               </div>
 
               <div className={styles.field}>
-                <label htmlFor="country" className={styles.label}>Country of Residence *</label>
+                <label htmlFor="email" className={styles.label}>Email Address *</label>
                 <input
-                  id="country"
-                  type="text"
-                  autoComplete="country-name"
-                  className={`${styles.input} ${errors.country ? styles.inputError : ''}`}
-                  {...register('country', { required: 'Country is required' })}
+                  id="email"
+                  type="email"
+                  autoComplete="email"
+                  className={`${styles.input} ${errors.email ? styles.inputError : ''}`}
+                  {...register('email', {
+                    required: 'Email is required',
+                    pattern: { value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/, message: 'Enter a valid email address' },
+                  })}
                 />
-                {errors.country && <span className={styles.error} role="alert">{errors.country.message}</span>}
+                {errors.email && <span className={styles.error} role="alert">{errors.email.message}</span>}
               </div>
 
               <div className={styles.field}>
-                <label htmlFor="condition" className={styles.label}>Primary Condition / Area of Interest *</label>
+                <label htmlFor="condition" className={styles.label}>Primary Condition *</label>
                 <select
                   id="condition"
                   className={`${styles.input} ${errors.condition ? styles.inputError : ''}`}
@@ -141,12 +144,12 @@ export function ContactForm() {
               </div>
 
               <div className={styles.field}>
-                <label htmlFor="message" className={styles.label}>Tell Us About Your Case</label>
+                <label htmlFor="message" className={styles.label}>Brief Description of Your Case</label>
                 <textarea
                   id="message"
                   rows={4}
                   className={styles.textarea}
-                  placeholder="Please describe your current symptoms, treatment history, and any questions you have…"
+                  placeholder="Describe your current situation, any treatments tried, and what you are hoping to explore…"
                   {...register('message')}
                 />
               </div>
@@ -159,13 +162,13 @@ export function ContactForm() {
                   {...register('consent', { required: 'Please confirm your consent' })}
                 />
                 <label htmlFor="consent" className={styles.consentLabel}>
-                  I consent to Helene Clinic contacting me regarding my enquiry and storing my information in accordance with their privacy policy. *
+                  I consent to Helene Clinic contacting me regarding my enquiry. *
                 </label>
               </div>
               {errors.consent && <span className={styles.error} role="alert">{errors.consent.message}</span>}
 
               <Button type="submit" variant="primary" size="lg" fullWidth disabled={isSubmitting}>
-                {isSubmitting ? 'Sending…' : 'Request Free Consultation'}
+                {isSubmitting ? 'Sending…' : 'Submit Enquiry'}
               </Button>
 
               <p className={styles.formNote}>
@@ -176,7 +179,7 @@ export function ContactForm() {
 
           <aside className={styles.sidebar} data-reveal data-reveal-delay="2">
             <div className={styles.sideCard}>
-              <h3 className={styles.sideTitle}>Contact Us Directly</h3>
+              <h3 className={styles.sideTitle}>Contact Details</h3>
               <div className={styles.contacts}>
                 <a href={`tel:${CONTACT.phone}`} className={styles.contactItem}>
                   <IconPhone />
@@ -191,26 +194,16 @@ export function ContactForm() {
                   <span>{CONTACT.address}</span>
                 </span>
               </div>
-
-              <a
-                href={`https://wa.me/${CONTACT.whatsapp}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={styles.waBtn}
-              >
-                <IconWhatsApp />
-                Chat on WhatsApp
-              </a>
             </div>
 
             <div className={styles.sideCard}>
-              <h3 className={styles.sideTitle}>What to Expect</h3>
+              <h3 className={styles.sideTitle}>What happens next</h3>
               <ol className={styles.expectList}>
                 {[
-                  'We review your enquiry within 24 hours',
-                  'A specialist will contact you to discuss your case',
-                  'You receive a personalised treatment assessment',
-                  'No commitment required at this stage',
+                  'We review your reports within 24 hours',
+                  'A specialist contacts you to discuss your case',
+                  'You receive a personalised suitability assessment',
+                  'No commitment required at any stage',
                 ].map((item, i) => (
                   <li key={i} className={styles.expectItem}>
                     <span className={styles.expectNum}>{i + 1}</span>

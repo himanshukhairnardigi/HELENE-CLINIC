@@ -1,0 +1,81 @@
+.whyJapan { background-color: var(--clr-navy-900); }
+
+.intro {
+  text-align: center;
+  max-width: 700px;
+  margin-inline: auto;
+  margin-bottom: var(--space-12);
+}
+
+.headline {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+  font-weight: var(--weight-semibold);
+  color: var(--clr-white);
+  line-height: var(--leading-tight);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-5);
+  margin-bottom: var(--space-12);
+}
+
+.card {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: var(--radius-xl);
+  padding: var(--space-7);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  transition: background var(--transition-base), border-color var(--transition-base);
+}
+
+.card:hover {
+  background: rgba(255,255,255,0.09);
+  border-color: rgba(201,164,74,0.3);
+}
+
+.icon { font-size: 1.8rem; }
+
+.cardTitle {
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  font-weight: var(--weight-semibold);
+  color: var(--clr-white);
+  line-height: var(--leading-snug);
+}
+
+.cardBody {
+  font-size: var(--text-sm);
+  line-height: var(--leading-relaxed);
+  color: rgba(255,255,255,0.6);
+}
+
+.cta { text-align: center; }
+
+.ctaBtn {
+  display: inline-block;
+  font-size: var(--text-sm);
+  font-weight: var(--weight-semibold);
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
+  color: var(--clr-navy-900);
+  background: var(--clr-gold-400);
+  border-radius: var(--radius-full);
+  padding: var(--space-4) var(--space-8);
+  text-decoration: none;
+  transition: background var(--transition-fast);
+}
+
+.ctaBtn:hover { background: var(--clr-gold-300); }
+
+@media (max-width: 1024px) {
+  .grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 600px) {
+  .grid { grid-template-columns: 1fr; }
+}

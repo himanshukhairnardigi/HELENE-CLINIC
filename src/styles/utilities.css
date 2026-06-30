@@ -27,6 +27,15 @@
   padding-block: var(--section-py);
 }
 
+/* Body bottom padding for sticky CTA bar */
+body {
+  padding-bottom: 68px; /* height of StickyCTA bar */
+}
+
+@media (max-width: 580px) {
+  body { padding-bottom: 120px; } /* expanded height on mobile */
+}
+
 .section--sm {
   padding-block: var(--section-py-sm);
 }
